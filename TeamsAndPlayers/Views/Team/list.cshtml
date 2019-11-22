@@ -1,0 +1,15 @@
+﻿@model TeamListViewModel
+
+
+<h1>@ViewBag.League</h1>
+@foreach (var team in Model.Teams)
+{
+    <div>
+        <h2>@team.TeamId</h2>
+        <h3>@team.TeamName</h3>
+        @foreach (var player in @team.Players)
+        {
+            <h4>@player.PlayerName</h4>
+        }
+    </div>
+}
